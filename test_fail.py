@@ -15,5 +15,10 @@ class TestCircle(unittest.TestCase):
         c = Circle(5)
         self.assertEqual(c.compute_area(), 78.5)
 
+    def test_will_fail(self):
+        c = Circle(5)
+        self.assertLess(c.compute_area(), 0)
+
+
 if __name__ == "__main__":
     unittest.main()
